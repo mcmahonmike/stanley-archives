@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import { Home } from './pages/home';
+import { Home } from './pages/home';
 import { Box, Button, Collapsible, Heading, Grommet, Layer, ResponsiveContext } from 'grommet'
 import { FormClose, Notification } from 'grommet-icons';
 
@@ -46,7 +46,7 @@ const App = () => {
         </AppBar>
         <Box direction='row' flex overflow={{ horizontal: 'hidden' }}>
           <Box flex align='center' justify='center'>
-            app body
+            <Home />
           </Box>
           {(!showSidebar || size !== 'small') ? (
            <Collapsible direction="horizontal" open={showSidebar}>
