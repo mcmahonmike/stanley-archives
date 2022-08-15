@@ -1,5 +1,5 @@
 import React from "react";
-import { DataTable, Box, Meter, Text, } from 'grommet'
+import { DataTable, Box, Meter, Text, Stack, } from 'grommet'
 
 
 
@@ -27,17 +27,22 @@ export function Home() {
     primary: true,
   },
   {
-    property: 'percent',
-    header: 'Wins/Losses',
+    property: 'win',
+    header: 'Wins',
     render: datum => (
       <Box pad={{ vertical: 'xsmall' }}>
+        <Stack anchor="center" guidingChild="last" alignSelf="center">
+          <Text weight="bold" size="medium" values={[{ value: datum.win }]} > 
+          {datum.win}
+          </Text>
         <Meter
           values={[{ value: datum.win }]}
           thickness='xsmall'
           size='xsmall'
-          type="circle"
+          type="semicircle"
           max='15'
         />
+        </Stack>
       </Box>
     ),
   },
