@@ -1,14 +1,11 @@
 import React from "react";
-import { DataTable, Box, Meter, Text, Stack, } from 'grommet'
-
-
-
-
+import { DataTable, Box, Meter, Text, Stack, PageHeader, } from 'grommet'
 
 
 export function Home() {
   return (
     <Box>
+      <PageHeader title="SEASON Stats"/>
 <DataTable
   columns={[
   {
@@ -28,7 +25,7 @@ export function Home() {
   },
   {
     property: 'win',
-    header: 'Wins',
+    header: 'Wins/Losses',
     render: datum => (
       <Box pad={{ vertical: 'xsmall' }}>
         <Stack anchor="center" guidingChild="last" alignSelf="center">
@@ -36,10 +33,10 @@ export function Home() {
           {datum.win}
           </Text>
         <Meter
-          values={[{ value: datum.win }]}
+          values={[{ value: datum.win, color: datum.theme }]}
           thickness='xsmall'
           size='xsmall'
-          type="semicircle"
+          type="circle"
           max='15'
         />
         </Stack>
@@ -48,10 +45,10 @@ export function Home() {
   },
   ]}
   data={[
-    { team: 'MTL', season: 'Mar' + 18, games_played: 15, win: 8 },
-    { team: 'NSH', season: 'Mar' + 18, games_played: 15, win: 7 },
-    { team: 'SJS', season: 'May' + 18, games_played: 15,  win: 5 },
-    { team: 'EDM', season: 'May' + 18, games_played: 15, win: 10 },
+    { team: 'MTL', season: 'Mar' + 18, games_played: 15, win: 8, theme: '#A6192E' },
+    { team: 'NSH', season: 'Mar' + 18, games_played: 15, win: 7, theme: '#FBBD2C' },
+    { team: 'SJS', season: 'May' + 18, games_played: 15,  win: 5, theme: '#006E7F' },
+    { team: 'EDM', season: 'May' + 18, games_played: 15, win: 10, theme: '#FF4C00' },
   ]}
 />
 </Box>

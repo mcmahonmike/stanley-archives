@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Home } from './pages/home';
+import { Stats } from './pages/stats';
 import { Box, Button, Collapsible, Heading, Grommet, Layer, ResponsiveContext } from 'grommet'
 import { FormClose, Notification } from 'grommet-icons';
 
@@ -58,7 +59,7 @@ const App = () => {
                 align='center'
                 justify='center'
               >
-                sidebar
+                <Stats />
               </Box>
             </Collapsible>
             ): (
