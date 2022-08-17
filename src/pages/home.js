@@ -1,5 +1,17 @@
 import React from "react";
-import { DataTable, Box, Meter, Text, Stack, PageHeader, } from 'grommet'
+import { 
+  DataTable, 
+  Box, 
+  Meter, 
+  Text, 
+  TextInput, 
+  Stack, 
+  PageHeader, 
+  Form, 
+  FormField, 
+  Button, 
+} from 'grommet'
+import { Edit } from "grommet-icons";
 
 
 export function Home() {
@@ -43,6 +55,12 @@ export function Home() {
       </Box>
     ),
   },
+  {
+  property: 'edit',
+  header: null,
+  primary: true,
+  render: datum => (  <Button icon={<Edit />} onClick={()=>{}} /> ),
+  },
   ]}
   data={[
     { team: 'MTL', season: 'Mar' + 18, games_played: 15, win: 8, theme: '#A6192E' },
@@ -51,6 +69,25 @@ export function Home() {
     { team: 'EDM', season: 'May' + 18, games_played: 15, win: 10, theme: '#FF4C00' },
   ]}
 />
+<PageHeader title="ADD Season"/>
+ <Form onSubmit={({ value }) => {}}>
+      <FormField name="team" htmlFor="textinput-id" label="Team">
+        <TextInput id="textinput-id" name="team" />
+      </FormField>
+      <FormField name="season" htmlFor="textinput-id" label="Season">
+        <TextInput id="textinput-id" name="season" />
+      </FormField>
+      <FormField name="games_played" htmlFor="textinput-id" label="Games Played">
+        <TextInput id="textinput-id" name="games_played" />
+      </FormField>
+      <FormField name="wins" htmlFor="textinput-id" label="Wins">
+        <TextInput id="textinput-id" name="wins" />
+      </FormField>
+      <Box direction="row" gap="medium">
+        <Button type="submit" primary label="Submit" />
+        <Button type="reset" label="Reset" />
+      </Box>
+    </Form> 
 </Box>
   )
 }

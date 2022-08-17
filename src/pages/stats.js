@@ -17,10 +17,10 @@ export function Stats() {
       <Avatar src="https://www.logosurfer.com/wp-content/uploads/2018/03/montreal-canadiens-logo_0.png" />
       </TableCell>
       <Menu
-        label="Stats"
+        label="Canadiens"
         items={[
-            { label: 'Stat One', onClick: () => {} },
-            { label: 'Stat Two', onClick: () => {} },
+            { label: 'Home Stats', onClick: () => {} },
+            { label: 'Away Stats', onClick: () => {} },
         ]}
         />
     </TableRow>
@@ -29,10 +29,10 @@ export function Stats() {
       <Avatar src="https://www.logosurfer.com/wp-content/uploads/2018/03/nashville-predators-logo_0.gif"/>
       </TableCell>
       <Menu
-        label="Stats"
+        label="Predators"
         items={[
-            { label: 'Stat One', onClick: () => {} },
-            { label: 'Stat Two', onClick: () => {} },
+            { label: 'Home Stats', onClick: () => {} },
+            { label: 'Away Stats', onClick: () => {} },
         ]}
         />
     </TableRow>
@@ -41,10 +41,10 @@ export function Stats() {
       <Avatar src="https://www.logosurfer.com/wp-content/uploads/2018/03/san-jose-sharks-logo_0.png"/>
       </TableCell>
       <Menu
-        label="Stats"
+        label="Sharks"
         items={[
-            { label: 'Stat One', onClick: () => {} },
-            { label: 'Stat Two', onClick: () => {} },
+            { label: 'Home Stats', onClick: () => {} },
+            { label: 'Away Stats', onClick: () => {} },
         ]}
         />
     </TableRow>
@@ -53,10 +53,10 @@ export function Stats() {
       <Avatar src="https://www.logosurfer.com/wp-content/uploads/2018/03/edmonton-oilers-logo_0.png"/>
       </TableCell>
       <Menu
-        label="Stats"
+        label="Oilers"
         items={[
-            { label: 'Stat One', onClick: () => {} },
-            { label: 'Stat Two', onClick: () => {} },
+            { label: 'Home Stats', onClick: () => {} },
+            { label: 'Away Stats', onClick: () => {} },
         ]}
         />
     </TableRow>

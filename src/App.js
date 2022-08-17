@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Home } from './pages/home';
 import { Stats } from './pages/stats';
-import { Box, Button, Collapsible, Heading, Grommet, Layer, ResponsiveContext } from 'grommet'
-import { FormClose, Notification } from 'grommet-icons';
+import { Box, Button, Collapsible, Heading, Grommet, Layer, ResponsiveContext, Tip } from 'grommet'
+import { FormClose, PieChart } from 'grommet-icons';
 
 const theme = {
   global: {
@@ -40,10 +40,14 @@ const App = () => {
       <Box fill>
         <AppBar>
           <Heading level='3' margin='none'>Archives</Heading>
+          <Box pad="small">
+          <Tip content="TEAM Stats">
           <Button
-            icon={<Notification />}
+            icon={<PieChart />}
             onClick={() => setShowSidebar(!showSidebar)}
           />
+              </Tip>
+              </Box>
         </AppBar>
         <Box direction='row' flex overflow={{ horizontal: 'hidden' }}>
           <Box flex align='center' justify='center'>
